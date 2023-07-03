@@ -76,8 +76,8 @@ namespace SpecFlowProject2.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("verifyLoginToLearningApplication")]
         [NUnit.Framework.CategoryAttribute("tag1")]
-        [NUnit.Framework.TestCaseAttribute("studentname", "12313", null)]
-        public void VerifyLoginToLearningApplication(string username, string password, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("victorianonyea@gmail.com", "Automate@23", null)]
+        public void VerifyLoginToLearningApplication(string email, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "tag1"};
@@ -87,7 +87,7 @@ namespace SpecFlowProject2.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("username", username);
+            argumentsOfScenario.Add("email", email);
             argumentsOfScenario.Add("password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("verifyLoginToLearningApplication", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
@@ -101,15 +101,21 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("I am on the \"https://demo.nopcommerce.com/\";", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("I am on the \"https://demo.nopcommerce.com/\";", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
-  testRunner.When(string.Format("I enter username \"{0}\"", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.When("I click on  the \'Log In\' button on landing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
-  testRunner.And(string.Format("I enter password  \"{0}\"", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("I enter email \"{0}\"", email), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
+  testRunner.And(string.Format("I enter password  \"{0}\"", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 11
+  testRunner.And("I click on \'LOG IN\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
   testRunner.Then("I should see the dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
