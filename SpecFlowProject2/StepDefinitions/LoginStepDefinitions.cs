@@ -1,6 +1,4 @@
 using SpecFlowProject2.PageObjects;
-using System;
-using TechTalk.SpecFlow;
 
 namespace SpecFlowProject2.StepDefinitions
 {
