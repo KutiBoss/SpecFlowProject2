@@ -1,6 +1,4 @@
 using SpecFlowProject2.PageObjects;
-using System;
-using TechTalk.SpecFlow;
 
 namespace SpecFlowProject2.StepDefinitions
 {
@@ -15,22 +13,38 @@ namespace SpecFlowProject2.StepDefinitions
             loginPage.NavigateToDemoSite(url);
         }
 
-        [When(@"I enter username ""([^""]*)""")]
-        public void WhenIEnterUsername(string studentname)
+        [When(@"I click on  the '([^']*)' button on landing page")]
+        public void WhenIClickOnTheButtonOnLandingPage(string login)
         {
-            loginPage.SelectLoginPage();
+            loginPage.SelectLogin(login);
+            
+        }
+
+
+        [When(@"I enter email ""([^""]*)""")]
+        public void WhenIEnterEmail(string email)
+        {
+            //loginPage.SelectEmail(email);
         }
 
         [When(@"I enter password  ""([^""]*)""")]
-        public void WhenIEnterPassword(string p0)
+        public void WhenIEnterPassword(string password)
         {
-            
+            //loginPage.SelectPassword(password);
         }
+
+
+        [When(@"I click on '([^']*)' button")]
+        public void WhenIClickOnButton(string loginbutton)
+        {
+            //loginPage.SelectLoginButton(loginbutton);
+        }
+
 
         [Then(@"I should see the dashboard")]
         public void ThenIShouldSeeTheDashboard()
         {
-            
+            //loginPage.AssertComputersDisplayed();
         }
     }
 }
