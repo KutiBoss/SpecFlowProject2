@@ -13,4 +13,4 @@ Scenario Outline: verifyLoginToLearningApplication
 
   Examples: 
   | email | password |
-  | victorianonyea@gmail.com    | Automate@23    |
+  | victorian@gmail.com    | Automate@23    |
